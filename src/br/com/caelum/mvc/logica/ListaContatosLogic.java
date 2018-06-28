@@ -13,8 +13,7 @@ public class ListaContatosLogic implements Logica{
 	@Override
 	public String executa(HttpServletRequest req, HttpServletResponse response) throws Exception {
 		List<Contato> contatos = new ContatoDao().getLista();
-		req.setAttribute("contatos", contatos);
-		
+		req.setAttribute("contatos", contatos);		
 		return "/WEB-INF/jsp/lista-contatos.jsp";
 	}
 
